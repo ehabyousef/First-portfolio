@@ -1,0 +1,456 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --dark-color: #1687a7;
+  --brown-color: #e4d1d3;
+  --icon-color: #b13010;
+  --section-color: #014955;
+  --red-color: #b13010;
+}
+::selection {
+  background-color: #00d7ff;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--brown-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--section-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--icon-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.main-button {
+  border: none;
+  padding: 10px 15px;
+  background-color: var(--brown-color);
+  transition: 0.5s;
+  width: fit-content;
+}
+
+.main-button:hover {
+  padding-left: 50px;
+}
+
+/* main-title  */
+.main-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-title .title {
+  position: relative;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.main-title .title::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: var(--brown-color);
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%);
+  transition: 0.7s;
+}
+
+.main-title .title:hover::before {
+  left: 100%;
+}
+
+.main-title .title a {
+  position: relative;
+  font-size: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 10px 10px;
+  transition: 0.7s;
+  color: transparent;
+}
+
+.main-title .title a::before,
+.main-title .title a::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: #262626;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+.main-title .title a::before {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.main-title .title a:hover::before {
+  color: var(--brown-color);
+  transform: translate(12px, -3px);
+}
+
+.main-title .title a::after {
+  clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+}
+
+.main-title .title a:hover::after {
+  color: var(--brown-color);
+  transform: translate(-12px, 3px);
+}
+
+.main-title h2 {
+  color: var(--brown-color);
+}
+
+.main-title .paragraph {
+  position: absolute;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-title .paragraph::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: var(--brown-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ******** */
+
+/* start navbar  */
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  background: var(--brown-color);
+  position: absolute;
+  bottom: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-link:hover:before {
+  width: 40px;
+  height: 5px;
+}
+
+.navbar .navbar-brand {
+  color: white;
+}
+
+.navbar .navbar-brand:hover {
+  color: var(--brown-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--brown-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--brown-color);
+}
+
+.navbar .search svg {
+  color: var(--brown-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--brown-color);
+}
+
+.navbar .rounded-pill {
+  background-color: var(--brown-color);
+  color: var(--section-color);
+  transition: 0.3s;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.navbar .navbar-collapse .rounded-pill:hover {
+  color: #eee;
+  background-color: #4d96ff;
+}
+
+/* end navbar */
+/* start lending */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+  background-image: url(../images/home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing h1 {
+  color: var(--dark-color);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.continer {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* end landing */
+
+/* start services  */
+.Services {
+  min-height: calc(100vh - 72px);
+  background-color: var(--dark-color);
+}
+
+.Services .icon-holder {
+  height: 200px;
+}
+
+.Services .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Services .icon-holder .icon {
+  color: var(--icon-color);
+}
+
+.Services .feat h4 {
+  color: var(--brown-color);
+}
+
+/* end Services */
+/* start portfolio */
+.portfolio {
+  min-height: calc(100vh - 72px);
+  background-color: var(--section-color);
+}
+
+.portfolio ul .active {
+  background-color: var(--brown-color);
+  color: var(--red-color);
+}
+
+.portfolio ul li {
+  padding: 0.5rem 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.portfolio ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.portfolio .box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #dd0a34c5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 5px));
+}
+
+.portfolio .box:hover::before {
+  transform: translateX(0);
+}
+
+/* end portfolio */
+/* start about  */
+.About {
+  min-height: calc(100vh - 72px);
+  background-color: var(--dark-color);
+}
+
+.About .description {
+  max-width: 500px;
+}
+
+.About .row h3 {
+  color: var(--brown-color);
+}
+
+/* end about  */
+/* start team  */
+.team {
+  min-height: calc(100vh - 72px);
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--dark-color);
+}
+
+.team h4 {
+  background-color: var(--brown-color);
+}
+.team .box {
+  overflow: hidden;
+}
+.team .box img {
+  transition: 0.3s;
+}
+
+.team .box:hover img {
+  transform: translateY(-20px) scale(1.3);
+  filter: sepia(50%);
+}
+
+.team .project {
+  background-color: #014955;
+}
+
+/* end team  */
+/* start blog  */
+.blog {
+  min-height: calc(100vh - 100px);
+  background-color: var(--dark-color);
+}
+
+/* start skiills  */
+.skills .skill {
+  margin: 20px 50px;
+}
+
+.skills .skill h2 {
+  display: flex;
+  justify-content: space-between;
+  color: var(--brown-color);
+}
+
+.skills .skill h2 span {
+  border-left: 1px solid var(--brown-color);
+  border-right: 1px solid var(--brown-color);
+  border-radius: 10px;
+}
+
+.skills .skill .progress {
+  height: 30px;
+  background-color: rgb(30 30 30 / 62%);
+  position: relative;
+}
+
+.skills .skill .progress span {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--brown-color);
+}
+
+/* end skiills  */
+/* start subscribe  */
+.subscribe {
+  background-color: #dd0a35;
+  min-height: 20vh;
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe .text {
+  font-size: 18px;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--brown-color);
+  color: var(--dark-color);
+  transition: 0.3s;
+}
+.subscribe input[type="submit"]:hover {
+  background-color: var(--section-color);
+  color: #eee;
+}
+/* end subscribe  */
+/* start footer  */
+.footer {
+  background-color: #014955;
+}
+.footer .copyright > span {
+  color: var(--red-color);
+}
+.footer .copyright div span {
+  color: var(--brown-color);
+}
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+  transition: 0.5s;
+}
+.footer .contact ul li:nth-child(1) svg:nth-child(1) {
+  color: #1687a7;
+}
+.footer .contact ul li:nth-child(2) svg {
+  color: #dd0a35;
+}
+.footer .contact ul li:nth-child(3) svg {
+  color: #1687a7;
+}
+.footer .contact ul li:nth-child(4) svg {
+  color: #dd0a35;
+}
+.footer .contact ul svg:hover {
+  background-color: var(--brown-color);
+}
+
+/* end footer  */
