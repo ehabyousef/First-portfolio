@@ -221,7 +221,7 @@ html {
 .landing {
   background-color: var(--dark-color);
   min-height: calc(100vh - 72px);
-  background-image: url(../images/home.jpg);
+  background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
