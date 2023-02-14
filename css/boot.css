@@ -231,7 +231,35 @@ html {
   font-size: 50px;
   font-weight: bold;
 }
-
+.landing .fa-hand-point-down {
+  font-size: 50px;
+  color: var(--dark-color);
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  animation: arrow 1s linear infinite;
+  -webkit-animation: arrow 1s linear infinite;
+  transition: 1s linear;
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -ms-transition: 1s linear;
+  -o-transition: 1s linear;
+  cursor: pointer;
+}
+@keyframes arrow {
+  0%,
+  20%,
+  40%,
+  50%,
+  90%,
+  10% {
+    bottom: 5px;
+  }
+  30%,
+  70% {
+    bottom: 7px;
+  }
+}
 .continer {
   position: relative;
   min-height: 100vh;
