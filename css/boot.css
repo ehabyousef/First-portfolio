@@ -197,6 +197,53 @@ html {
 }
 .navbar .navbar-brand:hover {
   color:var(--brown-color);
+  animation: bounce 2s ease infinite;
+  -webkit-animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+  10% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-15%);
+  }
+  30% {
+    transform: translateY(0%);
+  }
+  35% {
+    transform: translateY(-7%);
+  }
+  37% {
+    transform: translateY(0%);
+  }
+  39% {
+    transform: translateY(-3%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+
 }
 .navbar .navbar-nav .nav-link {
   text-transform: uppercase;
