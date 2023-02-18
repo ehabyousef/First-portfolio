@@ -189,14 +189,14 @@ html {
 
 .navbar .navbar-brand {
   color: white;
-  transition: .2s;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
-  -ms-transition: .2s;
-  -o-transition: .2s;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 .navbar .navbar-brand:hover {
-  color:var(--brown-color);
+  color: var(--brown-color);
   animation: bounce 2s ease infinite;
   -webkit-animation: bounce 2s ease infinite;
 }
@@ -243,7 +243,6 @@ html {
   100% {
     transform: translateY(0);
   }
-
 }
 .navbar .navbar-nav .nav-link {
   text-transform: uppercase;
@@ -321,8 +320,12 @@ html {
 @media (max-width: 500px) {
   .landing img {
     width: 200px;
-    right: 23%;
+    right: 25%;
     top: 5%;
+  }
+  #text-center {
+    margin-left: 0rem !important;
+    width: 100%;
   }
 }
 .landing h1 {
@@ -336,7 +339,7 @@ html {
   color: var(--dark-color);
   position: absolute;
   bottom: 35px;
-  left: 50%;
+  left: 44%;
   animation: arrow 1s linear infinite;
   -webkit-animation: arrow 1s linear infinite;
   transition: 1s linear;
