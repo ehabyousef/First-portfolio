@@ -578,7 +578,7 @@ html {
   color: #1687a7;
 }
 .footer .contact ul li:nth-child(4) svg {
-  color: #dd0a35;
+  color: #333;
 }
 .footer .contact ul svg:hover {
   background-color: var(--brown-color);
