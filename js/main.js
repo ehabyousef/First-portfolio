@@ -16,4 +16,4 @@ const autowriting = () => {
     counter = 1;
   }
 };
-const stop = setInterval(autowriting, 500);
+const stop = setInterval(autowriting, 400);
