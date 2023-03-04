@@ -511,7 +511,7 @@ html {
 }
 
 .skills .skill .progress {
-  height: 31px;
+  height: 30px;
   background-color: rgb(30 30 30 / 62%);
   position: relative;
 }
