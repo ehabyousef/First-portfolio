@@ -34,11 +34,11 @@ html {
   width: fit-content;
   position: relative;
   overflow: hidden;
-  transition: 0.8s;
+  -o-transition: 0.8s;
   -webkit-transition: 0.8s;
   -moz-transition: 0.8s;
   -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  transition: 0.8s;
   background-color: transparent;
   color: white;
 }
@@ -51,11 +51,11 @@ html {
   top: 0px;
   left: -65px;
   transform: skew(-36deg, 0deg);
-  transition: 0.8s;
+  -o-transition: 0.8s;
   -webkit-transition: 0.8s;
   -moz-transition: 0.8s;
   -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  transition: 0.8s;
 }
 #button:hover {
   color: rgb(255, 255, 255);
@@ -189,16 +189,16 @@ html {
 
 .navbar .navbar-brand {
   color: white;
-  transition: 0.2s;
+  -o-transition: 0.2s;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
-  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .navbar .navbar-brand:hover {
   color: var(--brown-color);
-  animation: bounce 2s ease infinite;
   -webkit-animation: bounce 2s ease infinite;
+  animation: bounce 2s ease infinite;
 }
 @keyframes bounce {
   10% {
@@ -340,13 +340,13 @@ html {
   position: absolute;
   bottom: 35px;
   left: 44%;
-  animation: arrow 1s linear infinite;
   -webkit-animation: arrow 1s linear infinite;
-  transition: 1s linear;
+  animation: arrow 1s linear infinite;
+  -o-transition: 1s linear;
   -webkit-transition: 1s linear;
   -moz-transition: 1s linear;
   -ms-transition: 1s linear;
-  -o-transition: 1s linear;
+  transition: 1s linear;
   cursor: pointer;
 }
 @keyframes arrow {
@@ -458,7 +458,8 @@ html {
 
 /* end about  */
 /* start team  */
-.team {
+
+/* .team {
   min-height: calc(100vh - 72px);
   background-color: var(--section-color);
 }
@@ -484,7 +485,7 @@ html {
 
 .team .project {
   background-color: #014955;
-}
+} */
 
 /* end team  */
 /* start blog  */
